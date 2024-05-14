@@ -57,7 +57,6 @@ def attack(update, context):
     except:
         update.message.reply_text("Wrong Format! Please Try Again...... \nFORMAT: {IP} {Port} {Time} \ne.g.. 1.1.1.1 8080 120")
 
-
 Token = "7150508963:AAGiTQr9F3os6CMv-9rTfRQVJWOJKB-82vo"
 updater = telegram.ext.Updater(Token, use_context=True)
 disp = updater.dispatcher

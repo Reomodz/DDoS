@@ -12,7 +12,7 @@ def help(update,context):
 def attack(update, context):
     arr = (update.message.text).split(' ')
     if len(arr) != 3:
-        update.message.reply_text("Wrong Format! Please Try Again...... \nFORMAT: {IP} {Port} {Time}")
+        update.message.reply_text("Wrong Format! Please Try Again...... \nFORMAT: {IP} {Port} {Time} \ne.g.. 1.1.1.1 8080 120")
         return
 
     host = arr[0]

@@ -18,7 +18,7 @@ def attack(update, context):
     host = arr[0]
     port = int(arr[1])
     second = int(arr[2])
-    print(host, port, second)
+    print("Input: ", arr)
 
     if port >= 30000 or port <= 10000:
         update.message.reply_text("Enter the port between 10000 - 30000")
@@ -53,6 +53,7 @@ def attack(update, context):
         threading.Thread(target=send_packet(800), daemon=True).start()
         update.message.reply_text("Attack Completed")
         print("Attack Completed")
+        print("Bot is Ready to go:")
     except:
         update.message.reply_text("Wrong Format! Please Try Again...... \nFORMAT: {IP} {Port} {Time} \ne.g.. 1.1.1.1 8080 120")
 

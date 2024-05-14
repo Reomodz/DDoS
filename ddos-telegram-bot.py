@@ -19,6 +19,14 @@ def attack(update, context):
     port = int(arr[1])
     second = int(arr[2])
 
+    if port >= 30000 and port <= 10000:
+        update.message.reply_text("Enter the port between 10000 - 30000")
+        return
+    
+    if second < 0 and second > 1000:
+        update.message.reply_text("Enter the time between 0 - 1000")
+        return
+
     update.message.reply_text(
         f"""
         Attack Initiated

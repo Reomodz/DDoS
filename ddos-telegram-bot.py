@@ -7,7 +7,7 @@ def start(update, context):
     update.message.reply_text("Hi! Greetings from Irfan")
     
 def help(update,context):
-    update.message.reply_text("FORMAT: {IP} {Port} {Time}")
+    update.message.reply_text("FORMAT: {IP} {Port} {Time} \ne.g.. 1.1.1.1 8080 120")
 
 def attack(update, context):
     arr = (update.message.text).split(' ')
